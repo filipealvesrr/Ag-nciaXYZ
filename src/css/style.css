@@ -89,6 +89,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #FFF;
+    max-width: var(--max-width-size);
+    margin: 0 auto;
 }
 
 .about .image {
@@ -122,6 +124,7 @@ body {
 .about .item p {
     font-size: 1.8rem;
     margin: 30px 0px;
+    font-weight: 400;
 }
 
 .about .item .btn-know-more {
@@ -133,13 +136,70 @@ body {
     font-weight: 700;
 }
 
+@media(max-width: 425px) {
+    .about .item {
+        text-align: center;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+/* SERVICES */
+
 .services {
     grid-area: services;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
 }
+
+.service {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.service img {
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.service p {
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 400px;
+    margin: 20px auto 0;
+    line-height: 25px;
+}
+
+.service:nth-child(1) {
+    background-color: lightskyblue;
+}
+
+.service:nth-child(2) {
+    background-color: lightpink;
+}
+
+@media(max-width: 425px) {
+    .services {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+/* PROJECTS */
 
 .projects {
     grid-area: projects;
 }
+
+/* FOOTER */
 
 .footer {
     grid-area: footer;
